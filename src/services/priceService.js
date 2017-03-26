@@ -81,7 +81,7 @@ class PriceService {
                 ** REMINDER **
                 ***/
                 // change back if to buyPrice using fixed price to force purchase
-                if((0.125 >= this._currentPrice && this.getNumUnsoldPurchases() < this._options.maxPurchases && this._options.maxPurchases > this._totalSold)) {
+                if((this._buyPrice >= this._currentPrice && this.getNumUnsoldPurchases() < this._options.maxPurchases && this._options.maxPurchases > this._totalSold)) {
                     const ticker = '"' + this._symbol + '"';
                     const buyPrice = '"' + this._buyPrice + '"';
                     const sellOutPrice = '"' + this._sellOutPrice + '"';
