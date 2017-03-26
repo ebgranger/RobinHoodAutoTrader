@@ -1,11 +1,8 @@
-/* eslint-disable */
-// @flow
-import React, { Component } from 'react';
-// import { Link } from 'react-router';
-import styles from './Home.css';
+import './App.css';
 import _ from 'lodash';
-import Api from '../helpers/api';
-import PriceService from '../services/priceService';
+import React, { Component } from 'react';
+import Api from './helpers/api';
+import PriceService from './services/priceService';
 
 
 
@@ -116,7 +113,7 @@ export default class Home extends Component {
     if(!this.state.isUserInfoSet) {
     return (
       <div>
-        <div className={styles.container} data-tid="container">
+        <div>
           <label>
           Username:
           <input type="text" value={this.state.userName} onChange={this.handleChangeUserName} />
@@ -130,7 +127,7 @@ export default class Home extends Component {
   } else {
     return (
       <div>
-        <div className={styles.container} data-tid="container">
+        <div>
             <label>
             Stock:
             <input type="text" value={this.state.value} onChange={this.handleChange} />
