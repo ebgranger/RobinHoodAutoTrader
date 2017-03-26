@@ -1,3 +1,4 @@
+/* eslint-disable */
 import axios from 'axios';
 
 const Api = {};
@@ -28,11 +29,8 @@ Api.buyStock = function(ticker, price, quantity, stopPrice, instrument, accountN
         "price": "0.12500000",
         "executions": [],
         "extended_hours": false,
-        "account": "https://api.robinhood.com/accounts/5RW70480/",
-        "url": "https://api.robinhood.com/orders/4e6a25a5-a067-4696-b4c4-d2f0e69015b4/",
         "created_at": "2017-01-30T13:46:04.300391Z",
         "side": "buy",
-        "position": "https://api.robinhood.com/positions/5RW70480/9d68b294-f3b9-4591-a85e-6efe95b3bebd/",
         "average_price": null,
         "quantity": "1.00000"
       });
@@ -47,7 +45,6 @@ Api.buyStock = function(ticker, price, quantity, stopPrice, instrument, accountN
         "time_in_force": "gtc",
         "fees": "0.00",
         "cancel": "https://api.robinhood.com/orders/13529300-1117-4fc6-90b3-5cfa46c25fe2/cancel/",
-        "id": "13529300-1117-4fc6-90b3-5cfa46c25fe2",
         "cumulative_quantity": "0.00000",
         "stop_price": null,
         "reject_reason": null,
@@ -59,11 +56,8 @@ Api.buyStock = function(ticker, price, quantity, stopPrice, instrument, accountN
         "price": "0.12600000",
         "executions": [],
         "extended_hours": false,
-        "account": "https://api.robinhood.com/accounts/5RW70480/",
-        "url": "https://api.robinhood.com/orders/13529300-1117-4fc6-90b3-5cfa46c25fe2/",
         "created_at": "2017-01-30T13:46:43.524992Z",
         "side": "sell",
-        "position": "https://api.robinhood.com/positions/5RW70480/3a47ca97-d5a2-4a55-9045-053a588894de/",
         "average_price": null,
         "quantity": "1.00000"
       });
@@ -133,8 +127,8 @@ Api.getToken = function(username, password){
     return request;
   }
 
- Api.getAccountInfo = function(){
-    const request =axios.get('http://localhost:8080/accounts/');
+ Api.getAccountInfo = function(username, password, token){
+    const request =axios.get('http://localhost:8080/accounts/' + username + '/' + password + '/' + token + '');
 
     return request.then( (data) => {
       const buyingPower = data.data.results[0].buying_power;

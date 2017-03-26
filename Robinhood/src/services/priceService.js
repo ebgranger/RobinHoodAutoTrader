@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Api from '../helpers/api';
 import Purchase from '../helpers/purchase';
 
@@ -16,6 +17,9 @@ class PriceService {
              maxPurchases: 5,
              totalSold: 0,
              totalBought: 0,
+             userName: null,
+             password: null,
+             accountNumber: null,
         }, config);
 
         this._symbol = symbol;
@@ -30,6 +34,10 @@ class PriceService {
         this._avg = this._options.avg;
         this._totalSold = this._options.totalSold;
         this._totalBought = this._options.totalBought;
+        this._userName = this._options.userName;
+        this._password = this._options.password;
+        this._accountNumber = this._options.accountNumber;
+
     }
     getSymbol() {
         return this._symbol;

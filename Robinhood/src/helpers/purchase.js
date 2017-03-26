@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Api from './api';
 
 const isEndState = function(state) {
