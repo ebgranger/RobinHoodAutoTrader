@@ -1,0 +1,47 @@
+.search-bar{
+  font-family: 'Source Code Pro', monospace;
+  padding: 10px;
+  margin: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+  width: 140px;
+}
+
+.stocksContainer{
+  border-style: groove;
+  float: left;
+  padding: 20px;
+  margin: 10px;
+  clear:left;
+}
+
+.stocks{
+  font-family: 'Source Code Pro', monospace;
+  font-size: 40px;
+}
+
+.stockBrokerStock {
+  font-family: 'Source Code Pro', monospace;
+  padding: 10px;
+  margin: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+  width: 200px;
+  float: left;
+  clear:left;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button--search {
+  border-radius: 0px;
+  margin-left: 10px;
+  width: 120px
+}
+
+.account{
+  border-style: groove;
+  float: left;
+  clear: left;
+  padding: 20px;
+  margin: 10px;
+}
